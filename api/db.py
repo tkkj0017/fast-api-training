@@ -17,5 +17,5 @@ Base = declarative_base()
 
 # セッションを取得しDBアクセス可能とする
 async def get_db():
-    async with async_session as session:
+    async with async_session() as session:
         yield session
